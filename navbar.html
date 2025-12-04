@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #131921; 
+  padding: 10px;
+  color: white;
+}
+.logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav-center {
+  display: flex;
+  flex: 1; 
+  margin: 0 20px;
+}
+
+.search-box {
+  flex: 1;
+  padding: 8px;
+  border: none;
+}
+
+.search-btn {
+  background-color: #febd69; 
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+</style>
+
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="amazon-logo.png" alt="Amazon Logo" class="logo">
+  </div>
+
+  <div class="nav-center">
+    <input type="text" placeholder="Search Amazon" class="search-box">
+    <button class="search-btn">🔍</button>
+  </div>
+
+  <div class="nav-right">
+    <a href="#">Sign in</a>
+    <a href="#">Returns& Orders</a>
+    <a href="#">Cart🛒</a>
+  </div>
+</nav>
+
+</body>
+</html>
