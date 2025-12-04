@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .pictures{
+      margin: 10vh;
+      text-align: center;
+    }
+
+    .pictures img{
+      height: 30vh;
+      margin: 20px;
+      transition-property: all;
+      transition-duration: 0.5s;
+    }
+
+    .pictures img:hover{
+      transform: scale(1.2);
+      box-shadow: 4px 4px 10px 5px grey;
+    }
+
+    .lightbox{
+      background-color: rgb(0, 0, 0,0.8 );
+      text-align: center;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top:0px;
+      left:0px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.8s;
+    }
+
+    .lightbox img{
+      height: 80vh;
+    }
+
+    .lightbox:target{
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .close{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+    }
+    .img-wrapper{
+      display: inline-block;
+      position:relative;
+    }
+    .img-wrapper{
+      height: 60px;
+      width:60px;
+      border-radius:50px;
+      background-color: black;
+      display: inline-block;
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);  
+      z-index: 2;  
+      translation: all 0 ,5sec;
+    }
+    .img-wrapper:hover:before{
+      background-color: black;
+      top:10px;
+
+    }
+    album::after{
+      content:"";
+      height:5px;
+      width:70px;
+      background-image: linear-gradient(to right yellow ,green, red);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="pictures">
+    <div class="wrapper">
+
+    <a href="#img1">
+      <img
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="Image 1">
+    </a></div>
+  <div>
+    <a href="#img2">
+      <img
+        src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
+        alt="">
+    </a>
+    <div>
+    <a href="#img3">
+      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg" alt="">
+    </a>
+  </div>
+
+  <div class="lightbox" id="img1">
+    <a href="#" class="close"></a>
+      <img
+        src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+        alt="Image 1">
+  </div>
+
+
+  <div class="lightbox" id="img2">
+    <a href="#" class="close"></a>
+      <img
+        src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
+        alt="">
+  </div>
+
+  <div class="lightbox" id="img3">
+    <a href="#" class="close"></a>
+      <img src="https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg" alt="">
+  </div>
+
+</body>
+
+</html>
